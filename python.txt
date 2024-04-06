@@ -1,0 +1,157 @@
+#built-in data structure in python (list, tuple, set & dictionary)
+
+# fruits = ["apple", "banana", "cherry", "apple"]
+# print(fruits[:3])
+
+# fruits[1] = "mango"
+
+# del fruits[1]
+# del fruits
+# fruits.remove('banana')
+# result = fruits.pop(1)
+
+# fruits.clear()
+
+# print(type(fruits))
+
+# result = list((2, 3, 4, 1, 0))
+
+# for fruit in fruits:
+#     print(fruit)
+
+
+#item add into list
+# empty_list = []
+
+# empty_list.append(3)
+# empty_list.append(1)
+
+# empty_list.extend([8, 9, 6])
+# empty_list.extend('hello')
+
+# empty_list.insert(3, 9)
+# print(empty_list.index(9))
+
+# print(empty_list)
+
+
+#sort item
+
+# list_obj = ['Rayhan', 'Jubayer', "Zakariya", 'Sadiqul', 'Abdullah']
+# list_obj.sort()
+
+# print(list_obj)
+
+# nums = [3, 4, 1, 0, 5, 8]
+
+# nums.sort(reverse=True)
+
+# nums2 = list(nums)
+
+# nums2 = nums.copy()
+# print(nums2)
+
+# num1 = [1, 2, 3]
+# num2 = [4, 5, 6]
+
+# num3 = num1 + num2
+
+# for x in num2:
+#     num1.append(x)
+
+# num1.extend(num2)
+
+# print(num1)
+
+# nums = [x for x in range(1, 101) if x % 2 != 0]
+
+# new_list = []
+
+# for x in range(1, 101):
+#     if x % 2 != 0:
+#         new_list.append(x)
+# print(new_list)
+
+
+# fruits = ("apple", "banana", "cherry")
+
+# (green, yellow, red) = fruits
+
+# print(green)
+# print(yellow)
+# print(red)
+
+
+students = [
+    {
+        'id': 101,
+        'name': "Sajjad Hossian",
+        'class': 'Five',
+        'roll': 12,
+        'age': 10,
+        'marks': {}
+    },
+    {
+        'id': 102,
+        'name': "Kamrul Mia",
+        'class': 'Five',
+        'roll': 15,
+        'age': 11,
+        'marks': {}
+    },
+    {
+        'id': 103,
+        'name': "Almas Islam",
+        'class': 'Five',
+        'roll': 4,
+        'age': 12,
+        'marks': {}
+    },
+    {
+        'id': 104,
+        'name': "Noman Islam",
+        'class': 'Six',
+        'roll': 1,
+        'age': 13,
+        'marks': {
+            'bangla': 50,
+            'english': 80,
+            'math': 70
+        }
+    }
+]
+
+total_marks = 0
+total_sub = 0
+
+for student in students:
+    for mark in student['marks'].values():
+        total_marks += mark
+        total_sub += 1
+
+
+average_mark = total_marks / total_sub
+
+def cgpa_calculator(average_mark):
+    if average_mark >= 80:
+        result = "A+"
+    elif average_mark >= 70:
+        result = "A"
+    elif average_mark >= 60:
+        result = "A-"
+    elif average_mark >= 50:
+        result = "B"
+    elif average_mark >= 40:
+        result = "C"
+    elif average_mark >= 33:
+        result = "D"
+    else:
+        result = "F"
+
+    return result
+
+
+rohim = cgpa_calculator(average_mark)
+
+print(rohim)
+ 
